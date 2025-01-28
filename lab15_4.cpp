@@ -19,3 +19,20 @@ int main(){
 }
 
 //Do not modify source code above this line
+void shuffle(int &x,int &y,int &z,int &k){
+	int money[]={x,y,z,k};
+	for(int i=3;i>0;i--){
+		int j = rand()%(1+i);
+		int temp = money[i];
+		money[i]=money[j];
+		money[j]=temp;
+
+	}
+	/*for(int i=0;i<4;i++){
+		cout << "money "<<i+1<<" = " << money[i] << endl;
+	}*/
+	x=money[0];
+	y=money[1];
+	z=money[2];
+	k=money[3];
+}
